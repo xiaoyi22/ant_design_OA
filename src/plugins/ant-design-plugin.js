@@ -6,12 +6,14 @@ import {
     Input,
     InputNumber,
     Layout,
+    Slider,
     Row,
     Col,
     Button,
     Icon,
     Radio,
-    Checkbox
+    Checkbox,
+    Menu,
 } from "ant-design-vue"
 
 Vue.use(Avatar)
@@ -26,3 +28,6 @@ Vue.use(Button)
 Vue.use(Icon)
 Vue.use(Radio)
 Vue.use(Checkbox)
+Vue.use(Slider)
+Vue.use(Menu)
+Vue.use(Avatar)

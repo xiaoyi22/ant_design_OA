@@ -4,12 +4,24 @@ import Userlogin from '../views/Userlogin.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
+const routes = [{
     path: '/',
     name: 'login',
-    component: Userlogin
+    component: Userlogin,
+    redirect:"/index"
   },
+  {
+    path: '/index',
+    name: 'index',
+    component: () => import('../components/index.vue'),
+    children: [
+      {
+        path:'workbench',
+        name:'workbench',
+        component:()=> import('../components/workbench')
+      }
+    ]
+  }
 ]
 
 const router = new VueRouter({
